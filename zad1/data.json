@@ -1,0 +1,59 @@
+{
+  "clubs": [
+    {
+      "name": "Real",
+      "city": "Madrid",
+      "stadium": "Santiago Bernabeu",
+      "capacity": 1234553,
+      "coach": "Zinedine zidane",
+      "chairman": "Fiorentino Perez",
+      "league": "La liga"
+    },
+    {
+      "name": "Arsenal",
+      "city": "Londyn",
+      "stadium": "Stamford Bridge",
+      "capacity": 1234553,
+      "coach": "Arsene Wenger",
+      "chairman": "Fiorentino Perez",
+      "league": "La liga"
+    },
+    {
+      "name": "Chelsea",
+      "city": "Londyn",
+      "stadium": "Łąkowa 45",
+      "capacity": 1234553,
+      "coach": "Murinho",
+      "chairman": "Fiorentino Perez",
+      "league": "La liga"
+    },
+    {
+      "name": "PSG",
+      "city": "Paris",
+      "stadium": "Santiago Bernabeu",
+      "capacity": 1234553,
+      "coach": "Unai Emery",
+      "chairman": "Szejk",
+      "league": "league"
+    },
+
+    {
+      "name": "Wisła",
+      "city": "Kraków",
+      "stadium": "Reymonta 22",
+      "capacity": 1234553,
+      "coach": "Franek Smuda",
+      "chairman": "Miasto Krakow",
+      "league": "La liga"
+    },
+    {
+      "name": "Gedania",
+      "city": "Gdańsk",
+      "stadium": "San siro",
+      "capacity": 1234553,
+      "coach": "Zinedine zidane",
+      "chairman": "Fiorentino Perez",
+      "league": "La liga"
+    }
+  ]
+}
