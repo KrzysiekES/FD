@@ -1,0 +1,28 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "tutorial",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://KrzysiekES@bitbucket.org/KrzysiekES/reactjs_tutorialspoint.git"
+  },
+  "keywords": [
+    "tutorial",
+    "reactJS",
+    "JS",
+    "JavaScript"
+  ],
+  "author": "Krzysiek Stelmach",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/KrzysiekES/reactjs_tutorialspoint#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "webpack": "^2.3.1",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
