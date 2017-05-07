@@ -21,6 +21,7 @@ import { MainPageComponent } from './main-page/main-page.component';
     HttpModule,
     RouterModule.forRoot([
       { path: 'home', component: MainPageComponent },
+      { path: 'single', component: SingleClubComponent },
        { path: '', redirectTo: 'home', pathMatch: 'full' },
        { path: '**', redirectTo: 'home', pathMatch: 'full' }
     ]),
