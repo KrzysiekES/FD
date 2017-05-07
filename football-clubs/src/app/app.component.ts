@@ -16,14 +16,5 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(){
-      let clubs = [];
-
-      let x = new Club('ssss','sss','sss','sss','sss', 2222);
-      clubs.push(x);
-     
-      let y = new Club('ssss','sss','sss','sss','sss', 2222);
-
-      clubs.push(y); 
-      //console.log(clubs);
   }
 }

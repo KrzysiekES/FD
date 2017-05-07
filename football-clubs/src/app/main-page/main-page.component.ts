@@ -14,16 +14,14 @@ export class MainPageComponent implements OnInit {
   clubs: any[] = [];
   ngOnInit() {
           
-
       let x = new Club('Real','Madrid','Zidane','Santiago bernabeum','Primera Division', 2222);
-      this.clubs.push(x);
-     
       let y = new Club('FC Barcelona','Barcelona', 'Luis Erique','Camp Nou','Primera Division', 2222);
-      
       let z = new Club('Lechia', 'Gdańsk', 'Nowak', 'Traugutta', 'Ekstraklasa', 100000 )
+
+      this.clubs.push(x);
       this.clubs.push(z);
       this.clubs.push(y); 
-     // console.log(clubs);
+
   }
 
 }
