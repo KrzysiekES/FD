@@ -14,9 +14,9 @@ export class MainPageComponent implements OnInit {
   clubs: any[] = [];
   ngOnInit() {
           
-      let x = new Club('Real','Madrid','Zidane','Santiago bernabeum','Primera Division', 2222);
-      let y = new Club('FC Barcelona','Barcelona', 'Luis Erique','Camp Nou','Primera Division', 2222);
-      let z = new Club('Lechia', 'Gdańsk', 'Nowak', 'Traugutta', 'Ekstraklasa', 100000 )
+      let x = new Club(1,'Real','Madrid','Zidane','Santiago bernabeum','Primera Division', 2222);
+      let y = new Club(2, 'FC Barcelona','Barcelona', 'Luis Erique','Camp Nou','Primera Division', 2222);
+      let z = new Club(3, 'Lechia', 'Gdańsk', 'Nowak', 'Traugutta', 'Ekstraklasa', 100000 )
 
       this.clubs.push(x);
       this.clubs.push(z);

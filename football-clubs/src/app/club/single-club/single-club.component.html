@@ -1,11 +1,41 @@
-<div>
-  <h5>CLUB INFO</h5>
-  Name:  {{ club.name }} <br>
-  City:  {{ club.city }}<br>
-  Coach:  {{ club.coach }}<br>
-  Ground:  {{ club.ground }}<br>
-  League:   {{ club.league }}<br>
-  Capacity:  {{ club.capacity }}
-</div>
+<table class="table  table-striped">
+  <thead>
+    <tr>
+      <td><h3>CLUB INFO</h3></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>{{ club.name }}</td>
+    </tr>
+    <tr>
+      <td>City</td>
+      <td>{{ club.city }}</td>
+    </tr>
+    <tr>
+      <td>Coach</td>
+      <td>{{ club.coach }}</td>
+    </tr>
+    <tr>
+      <td>Ground</td>
+      <td>{{ club.ground }}</td>
+    </tr>
+    <tr>
+      <td>League</td>
+      <td>{{ club.league }}</td>
+    </tr>
+    <tr>
+      <td>Capacity</td>
+      <td>{{ club.capacity }}</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="text-center">
+        <button class="btn btn-primary btn-l" [routerLink]="['/clubs', club.id]">Show</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
  
