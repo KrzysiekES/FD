@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { ClubsService } from './../clubs.service';
-
+import { IClub } from './../iclub';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-create-club',
@@ -11,7 +12,19 @@ export class CreateClubComponent implements OnInit {
 
   constructor(private clubsService: ClubsService) { }
 
-  ngOnInit() {
+  club: IClub = {
+    id: 0,
+    name: '',
+    coach: '',
+    city: '',
+    ground: '',
+    league: '',
+    capacity: 0
   }
 
+  ngOnInit() {}
+
+  addClub(): void {
+    this.clubsService.addClub(this.club);
+  }
 }

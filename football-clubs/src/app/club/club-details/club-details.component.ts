@@ -14,7 +14,6 @@ export class ClubDetailsComponent implements OnInit {
   constructor( private clubsService: ClubsService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log(this.club);
     this.club = this.clubsService.getClub(+this.route.snapshot.params['id']);
   }
 
