@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ClubsService } from './../clubs.service';
-
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'clubs-list',
@@ -10,11 +10,23 @@ import { ClubsService } from './../clubs.service';
 
 export class ClubsListComponent implements OnInit {
   clubs: any;
+  search: any;
 
   constructor(private clubsService: ClubsService) { }
 
+  searchChange(search): void {
+    
+    function findClub(club){
+      if(club.name === search) {
+      return club;
+      }
+    }
+    this.clubs.find(findClub);
+  }
   ngOnInit() {
     this.clubs = this.clubsService.getClubs();
+
+     
   }
 
 }
