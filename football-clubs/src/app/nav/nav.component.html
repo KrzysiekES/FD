@@ -3,15 +3,15 @@
       aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    <a class="navbar-brand" href="#">Football Clubs</a>
+    <a class="navbar-brand" [routerLink]="['home']"  href="#">Football Clubs</a>
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Clubs List</a>
+          <a class="nav-link" [routerLink]="['home']" href="#">Clubs List</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Add Club</a>
+          <a class="nav-link" [routerLink]="['club/create']" href="#">Add Club</a>
         </li>
         <!--<li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
