@@ -7,13 +7,20 @@ import { AppComponent } from './app.component';
 import { SingleClubComponent } from './club/single-club/single-club.component';
 import { ClubsListComponent } from './club/clubs-list/clubs-list.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { NavComponent } from './nav/nav.component';
+import { ClubDetailsComponent } from './club/club-details/club-details.component';
+
+import { ClubsService } from './club/clubs.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     SingleClubComponent,
     ClubsListComponent,
-    MainPageComponent
+    MainPageComponent,
+    NavComponent,
+    ClubDetailsComponent
+
   ],
   imports: [
     BrowserModule,
@@ -22,11 +29,13 @@ import { MainPageComponent } from './main-page/main-page.component';
     RouterModule.forRoot([
       { path: 'home', component: MainPageComponent },
       { path: 'single', component: SingleClubComponent },
+      { path: 'clubs/:id', component: ClubDetailsComponent, pathMatch: 'full'},
        { path: '', redirectTo: 'home', pathMatch: 'full' },
-       { path: '**', redirectTo: 'home', pathMatch: 'full' }
+       { path: '**', redirectTo: 'home', pathMatch: 'full' },
+       
     ]),
   ],
-  providers: [],
+  providers: [ClubsService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
