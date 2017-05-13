@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { IClub } from './iclub';
 
 @Injectable()
 export class ClubsService {
@@ -10,9 +11,14 @@ export class ClubsService {
   getClub(id: Number){
     return CLUBS.find(event => event.id == id)
   }
+
+  addClub(club: IClub){
+    CLUBS.push(club);
+  }
+
 }
 
-const CLUBS = [{
+const CLUBS: IClub[] = [{
     id: 1,
     name: 'Real',
     city: 'Madrid',
