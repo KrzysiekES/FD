@@ -16,10 +16,15 @@ export class ClubsService {
     CLUBS.push(club);
   }
 
+  removeClub(id: number){
+    let x = CLUBS.find(event => event.id == id);
+    CLUBS.splice(x.id, 1);
+  }
+
 }
 
 const CLUBS: IClub[] = [{
-    id: 1,
+    id: 0,
     name: 'Real',
     city: 'Madrid',
     coach: 'Zinedine Zidane',
@@ -27,7 +32,7 @@ const CLUBS: IClub[] = [{
     league: 'Primera Division',
     capacity:  10000
   },{
-    id: 2,
+    id: 1,
     name: 'FC',
     city: 'Barcelona',
     coach: 'Luis Enrique',
@@ -36,7 +41,7 @@ const CLUBS: IClub[] = [{
     capacity:  10000
   }, 
   {
-    id: 3,
+    id: 2,
     name: 'Lechia',
     city: 'Gdansk',
     coach: 'Piotr Nowal',

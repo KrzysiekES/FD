@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ClubsService} from './../clubs.service';
 
 @Component({
   selector: 'single-club',
@@ -10,7 +11,11 @@ export class SingleClubComponent implements OnInit {
 
   @Input() club: any;
 
-  constructor() { }
+  constructor(private clubsService: ClubsService) { }
+
+  removeClub(): any {
+    this.clubsService.removeClub(this.club.id);
+  }
 
   ngOnInit() {
     console.log(this.club);

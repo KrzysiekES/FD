@@ -13,7 +13,7 @@ export class CreateClubComponent implements OnInit {
   constructor(private clubsService: ClubsService) { }
 
   club: IClub = {
-    id: 0,
+    id: 3,
     name: '',
     coach: '',
     city: '',
@@ -25,6 +25,8 @@ export class CreateClubComponent implements OnInit {
   ngOnInit() {}
 
   addClub(): void {
+    
     this.clubsService.addClub(this.club);
+    this.club.id++;
   }
 }

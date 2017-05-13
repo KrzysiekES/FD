@@ -32,6 +32,7 @@
     <tr>
       <td colspan="2" class="text-center">
         <button class="btn btn-primary btn-l" [routerLink]="['/clubs', club.id]">Show</button>
+        <i class="fa fa-trash" aria-hidden="true" (click)="removeClub()"></i>
       </td>
     </tr>
   </tbody>
