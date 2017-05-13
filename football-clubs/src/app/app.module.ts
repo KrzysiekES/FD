@@ -11,6 +11,7 @@ import { NavComponent } from './nav/nav.component';
 import { ClubDetailsComponent } from './club/club-details/club-details.component';
 
 import { ClubsService } from './club/clubs.service';
+import { CreateClubComponent } from './club/create-club/create-club.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ClubsService } from './club/clubs.service';
     ClubsListComponent,
     MainPageComponent,
     NavComponent,
-    ClubDetailsComponent
+    ClubDetailsComponent,
+    CreateClubComponent
 
   ],
   imports: [
@@ -30,6 +32,7 @@ import { ClubsService } from './club/clubs.service';
       { path: 'home', component: MainPageComponent },
       { path: 'single', component: SingleClubComponent },
       { path: 'clubs/:id', component: ClubDetailsComponent, pathMatch: 'full'},
+      { path: 'club/create', component: CreateClubComponent },
        { path: '', redirectTo: 'home', pathMatch: 'full' },
        { path: '**', redirectTo: 'home', pathMatch: 'full' },
        
