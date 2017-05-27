@@ -3,6 +3,7 @@ import { IClub } from './iclub';
 
 @Injectable()
 export class ClubsService {
+  id: number = 100;
 
   getClubs(){
     return CLUBS;
@@ -13,6 +14,7 @@ export class ClubsService {
   }
 
   addClub(club: IClub){
+    club.id = this.id ++;
     CLUBS.push(club);
   }
 

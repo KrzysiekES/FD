@@ -1,6 +1,6 @@
 export class Club {
 
-    id: number;
+    id?: number;
     name: string;
     city: string;
     coach: string;

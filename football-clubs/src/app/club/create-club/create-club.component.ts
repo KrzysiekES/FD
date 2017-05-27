@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { ClubsService } from './../clubs.service';
 import { IClub } from './../iclub';
-import { NgForm } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-club',
@@ -12,21 +13,29 @@ export class CreateClubComponent implements OnInit {
 
   constructor(private clubsService: ClubsService) { }
 
-  club: IClub = {
-    id: 3,
-    name: '',
-    coach: '',
-    city: '',
-    ground: '',
-    league: '',
-    capacity: 0
+  clubForm: FormGroup;
+
+  ngOnInit() {
+    let name = new FormControl();
+    let coach = new FormControl();
+    let city = new FormControl();
+    let ground = new FormControl();
+    let league = new FormControl();
+    let capacity = new FormControl();
+
+    this.clubForm = new FormGroup( {
+        name: name,
+        coach: coach,
+        city: city,
+        ground: ground,
+        league: league,
+        capacity: capacity
+    });
   }
 
-  ngOnInit() {}
+    addClub(values): void {
+      this.clubsService.addClub(values);
+      console.log(values);
+    }
 
-  addClub(): void {
-    
-    this.clubsService.addClub(this.club);
-    this.club.id++;
-  }
 }

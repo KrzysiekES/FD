@@ -1,24 +1,28 @@
 <div class="row">
   <h2>Add Club</h2>
-  <div class="col-md-12">
-    <label>Name: <input [(ngModel)]="club.name"></label>
-  </div>
-  <div class="col-md-12">
-    <label>City: <input [(ngModel)]="club.city"></label>
-  </div>
-  <div class="col-md-12">
-    <label>Coach: <input [(ngModel)]="club.coach"></label>
-  </div>
-  <div class="col-md-12">
-    <label>Ground: <input [(ngModel)]="club.ground"></label>
-  </div>
-  <div class="col-md-12">
-    <label>League: <input [(ngModel)]="club.league"></label>
-  </div>
-  <div class="col-md-12">
-    <label>Capacity: <input type="number" [(ngModel)]="club.capacity"></label>
-  </div>
-  <div class="col-md-12">
-    <button class="btn btn-primary" (click)="addClub()" >Add</button>
-  </div> 
+
+  <form [formGroup]="clubForm" autocomplete="off" (ngSubmit)="addClub(clubForm.value)" novalidate>
+
+    <div class="col-md-12">
+      <label>Name: <input formControlName="name"></label>
+    </div>
+    <div class="col-md-12">
+      <label>City: <input formControlName="city"></label>
+    </div>
+    <div class="col-md-12">
+      <label>Coach: <input formControlName="coach"></label>
+    </div>
+    <div class="col-md-12">
+      <label>Ground: <input formControlName="ground"></label>
+    </div>
+    <div class="col-md-12">
+      <label>League: <input formControlName="league"></label>
+    </div>
+    <div class="col-md-12">
+      <label>Capacity: <input type="number" formControlName="capacity"></label>
+    </div>
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-primary" >Add</button>
+    </div>
+  </form>
 </div>
