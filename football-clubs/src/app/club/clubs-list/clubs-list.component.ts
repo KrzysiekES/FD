@@ -10,22 +10,20 @@ import { NgForm } from '@angular/forms';
 
 export class ClubsListComponent implements OnInit {
   clubs: any;
+  clubsBeforeFiltered: any;
   search: any;
 
   constructor(private clubsService: ClubsService) { }
 
   searchChange(search): void {
-    
-    function findClub(club){
-      if(club.name === search) {
-      return club;
-      }
-    }
-    this.clubs.find(findClub);
+    let x = this.clubsBeforeFiltered.filter(c => {
+        return c.name.includes(search);
+    });
+    this.clubs = x;
   }
   ngOnInit() {
     this.clubs = this.clubsService.getClubs();
-
+    this.clubsBeforeFiltered = this.clubs;
      
   }
 
