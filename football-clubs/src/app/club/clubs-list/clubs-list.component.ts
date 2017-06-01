@@ -17,7 +17,8 @@ export class ClubsListComponent implements OnInit {
 
   searchChange(search): void {
     let x = this.clubsBeforeFiltered.filter(c => {
-        return c.name.includes(search);
+        let result = (c.name.toLowerCase().includes(search.toLowerCase()) || c.city.toLowerCase().includes(search.toLowerCase()));
+        return result;
     });
     this.clubs = x;
   }
