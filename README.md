@@ -17,6 +17,7 @@ npm start
 |Lista elementow| ✓ | 
 | Walidacja dodawania | ✓ | create-club.component
 | Observables & RxJs | x |
-| Routing | ✓ |
+| Routing | x |
+| Guarding | ✓ |
 | Wyszukiwanie | ✓| |
 |Serwisy |✓| |
