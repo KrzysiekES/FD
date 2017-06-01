@@ -1,28 +1,33 @@
 <div class="row">
   <h2>Add Club</h2>
+  <hr>
+  <div class="col-md-12">
+    <form [formGroup]="clubForm" autocomplete="off" (ngSubmit)="addClub(clubForm?.value)" novalidate>
 
-  <form [formGroup]="clubForm" autocomplete="off" (ngSubmit)="addClub(clubForm.value)" novalidate>
+      <div class="form-group">
+        <label [ngClass]="{'error' : validateName() }">Name: <input class="form-control" formControlName="name"/></label>
 
-    <div class="col-md-12">
-      <label>Name: <input formControlName="name"></label>
-    </div>
-    <div class="col-md-12">
-      <label>City: <input formControlName="city"></label>
-    </div>
-    <div class="col-md-12">
-      <label>Coach: <input formControlName="coach"></label>
-    </div>
-    <div class="col-md-12">
-      <label>Ground: <input formControlName="ground"></label>
-    </div>
-    <div class="col-md-12">
-      <label>League: <input formControlName="league"></label>
-    </div>
-    <div class="col-md-12">
-      <label>Capacity: <input type="number" formControlName="capacity"></label>
-    </div>
-    <div class="col-md-12">
-      <button type="submit" class="btn btn-primary" >Add</button>
-    </div>
-  </form>
+        <em *ngIf="validateName() "> validation errors</em>
+      </div>
+      <div class="form-group">
+        <label [ngClass]="{'error' : validateCity() }">City: <input class="form-control" formControlName="city"></label>
+        <em *ngIf="validateCity() "> validation errors</em>
+      </div>
+      <div class="form-group">
+        <label>Coach: <input  class="form-control"formControlName="coach"></label>
+      </div>
+      <div class="form-group">
+        <label>Ground: <input  class="form-control"formControlName="ground"></label>
+      </div>
+      <div class="form-group">
+        <label>League: <input  class="form-control"formControlName="league"></label>
+      </div>
+      <div class="form-group">
+        <label>Capacity: <input  class="form-control" type="number" formControlName="capacity"></label>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Add</button>
+      </div>
+    </form>
+  </div>
 </div>
