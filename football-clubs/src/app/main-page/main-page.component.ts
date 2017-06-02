@@ -1,5 +1,7 @@
+import { WikipediaService } from './../wikipedia.service';
 import { Component, OnInit } from '@angular/core';
 import { Club } from './../club/club';
+
 
 
 @Component({
@@ -9,7 +11,7 @@ import { Club } from './../club/club';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor() { }
+  constructor( private wiki: WikipediaService) { }
 
   clubs: any[] = [];
   ngOnInit() {
@@ -20,7 +22,13 @@ export class MainPageComponent implements OnInit {
 
       this.clubs.push(x);
       this.clubs.push(z);
-      this.clubs.push(y); 
+      this.clubs.push(y);
+
+      this.wiki.getClubs().subscribe( 
+        d => {
+          console.log(d);
+        }
+      );
 
   }
 

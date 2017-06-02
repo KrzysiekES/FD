@@ -1,7 +1,8 @@
+import { WikipediaService } from './wikipedia.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SingleClubComponent } from './club/single-club/single-club.component';
@@ -9,6 +10,7 @@ import { ClubsListComponent } from './club/clubs-list/clubs-list.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { NavComponent } from './nav/nav.component';
 import { ClubDetailsComponent } from './club/club-details/club-details.component';
+
 
 import { ClubsService } from './club/clubs.service';
 import { CreateClubComponent } from './club/create-club/create-club.component';
@@ -28,6 +30,7 @@ import { CreateClubComponent } from './club/create-club/create-club.component';
     BrowserModule,
     FormsModule,
     HttpModule,
+    JsonpModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: 'home', component: MainPageComponent },
@@ -39,7 +42,7 @@ import { CreateClubComponent } from './club/create-club/create-club.component';
        
     ]),
   ],
-  providers: [ClubsService ],
+  providers: [ClubsService, WikipediaService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
