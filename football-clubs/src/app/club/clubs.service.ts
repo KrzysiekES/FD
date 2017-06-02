@@ -19,8 +19,9 @@ export class ClubsService {
   }
 
   removeClub(id: number){
-    let x = CLUBS.find(event => event.id == id);
-    CLUBS.splice(x.id, 1);
+    let findClub = CLUBS.find(event => event.id == id);
+    let findIndex = CLUBS.indexOf(findClub);
+    CLUBS.splice(findIndex, 1);
   }
 
 }
