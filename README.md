@@ -13,11 +13,12 @@ npm start
 ### Projekt Kluby Piłkarskie (folder football-clubs)
 | Wymagania | Stan | Plik|
 | ------ | ------ | ----
-| Dodawanie | ✓| create-club.component.ts
-|Lista elementow| ✓ | 
+| Dodawanie | ✓| create-club.component
+|Lista elementow| ✓ | clubs-list.component
+|usuwanie elementow| ✓ | single-club.component.ts
 | Walidacja dodawania | ✓ | create-club.component
-| Observables & RxJs | x |
-| Routing | x |
-| Guarding | ✓ |
-| Wyszukiwanie | ✓| |
-|Serwisy |✓| |
+| Observables & RxJs | ✓ |main-page, wikipadia service
+| Routing | ✓ | app.module
+| Guarding | ✓ |  app.module,route-activator.service
+| Wyszukiwanie | ✓|clubs-list.component |
+|Serwisy |✓| clubs.service.ts |
